@@ -1,0 +1,21 @@
+﻿@page
+@using Flash.Models.ViewModels
+@model IndexModel
+@{
+    ViewBag.Title = "Rehearse page";
+}
+
+<section class="flashcards-section pagination-container">
+    <div class="flashcards-section-content">
+        <div class="selected-deck">
+            <span>@(Model.Deck is null ? "No Deck" : Model.Deck.Name)</span>
+        </div>
+        <div class="flashcards">
+            @foreach (var flashcard in Model.DueFlashcards)
+            {    CardOnRehearsePage card = new(flashcard, Model.Deck!, Model.Pagination!.CurrentPage);
+                <partial name="_Flashcard" model="card"/>
+            }
+        </div>
+    </div>
+    <div class="pagination" pagination="Model.Pagination"></div>
+</section>
