@@ -13,4 +13,4 @@
 * Для смены пароля или доступа к почте перейдите на страницу Profile -> Settings. И наконец, для выхода из сессии, пройдите на Profile -> Logout. 
 
 ### Использованные технологии
-ASP.NET Core Razor Pages
+ASP.NET Core Razor Pages, EF Core
